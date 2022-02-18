@@ -22,13 +22,128 @@ h3 {
     font-family: 'Montserrat';
 }
 
+h4 {
+    font-family: 'Montserrat';
+}
+
+.contacto{
+    display:flex;
+    flex-direction: row;
+}
+
+.contacto img{
+    height: 80px;
+}
+
+.contenido {
+    align-items:center;
+}
+
+.card {
+    border:solid;
+    border-radius: 10px;
+    border-color:darkgrey;
+    border-width: thin;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.estrellitas {
+    margin-left: 70%;
+    padding-top: 20%;
+    z-index: 4;
+}
+
 .img-curso {
     height: 150px;
     width: 190px;
+}
+
+nav a:hover{
+    font-style:italic;
+}
+  
+.principal{
+    margin-left: 10%;
+    animation-name: fadein;
+    animation-duration: 1.2s;
+    z-index: 1;
 }
 
 .skills-logos {
     display: flex;
     text-align: center;
     justify-content: space-around;
+} 
+
+.stars {
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    position:absolute;
+  }
+
+  .star-1 {
+    margin-left: 3%;
+    animation-duration: 2s;
+    animation-name: twinkle;
+  }
+
+  .star-2 {
+    margin-top: 10%;
+    margin-left: 10%;
+    animation-duration: 1s;
+    animation-name: twinkle;
+  }
+
+  .star-3 {
+    margin-top: 7%;
+    margin-right: 12%;
+    animation-duration: 0.5s;
+    animation-name: twinkle;
+  }
+
+  .star-4{
+      width: 10px;
+      height: 10px;
+      margin-top: 14%;
+    margin-left: 7%;
+    animation-duration: 0.7s;
+    animation-name: twinkle;
+  }
+
+  .star-5{
+    width: 10px;
+    height: 10px;
+    margin-top: 3%;
+  margin-left: 10%;
+  animation-duration: 0.9s;
+  animation-name: twinkle;
+}
+
+  @keyframes twinkle {
+    20% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+  }
+
+@keyframes fadein {
+    from {
+      margin-left: 50%;
+      opacity: 0;
+    }
+  
+    to {
+      margin-left: 10%; 
+    }
+  }
+
+@media screen and (max-width: 1200px){
+    .card {
+        flex-direction: column;
+    }
 }
